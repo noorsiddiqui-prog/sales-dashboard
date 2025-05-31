@@ -1,32 +1,73 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { FC, useState } from "react";
+import NavIconButton from "../common/IconButtons/NavIconButton";
 import ThemeToggle from "../theme/ThemeToggle";
-import HamburgerButton from '../common/IconButtons/HamburgerButton';
-import NavbarMenuButton from '../common/MenuButtons/NavbarMenuButton';
+import HeaderClasses from "@/styles/classes/HeaderClasses";
+import { navIcons } from "@/config/constants/Navbar";
+import HeaderAvatar from "../profile-avatar/HeaderAvatar";
+import HeaderMenu from "../common/Menus/HeaderMenu";
+import HamburgerButton from "../common/IconButtons/HamburgerButton";
+import DashboardDrawer from "../drawers/DashboardDrawer";
 
-export default function DashboardHeader() {
-    const [drawerOpen, setDrawerOpen] = useState(false);
+interface IDashboardHeaderProps {}
 
-    return (
-        <>
-            <div className='flex justify-between items-center'>
-                <div><HamburgerButton onClick={() => setDrawerOpen(true)} /></div>
-                <div className='flex gap-2'>
-                    <div>
-                        <div className={`flex flex-row gap-8`}>
-                            <NavbarMenuButton href="/dashboard">Dashboard</NavbarMenuButton>
-                            <NavbarMenuButton href="/products">Products</NavbarMenuButton>
-                            <NavbarMenuButton href="/orders">Orders</NavbarMenuButton>
-                            <NavbarMenuButton href="/users">Users</NavbarMenuButton>
-                            <div><ThemeToggle /></div>
-                        </div>
-                    </div>
-                </div>
+const DashboardHeader: FC<IDashboardHeaderProps> = (props) => {
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+
+  return (
+    <div className={HeaderClasses.headerContainer}>
+      <div className="flex">
+        <div className="sm:hidden relative block mr-4">
+          <HamburgerButton onClick={() => setDrawerOpen(!drawerOpen)} />
+        </div>
+        <div className={HeaderClasses.menuHeadingButton}>Dashboard</div>
+      </div>
+
+      <div className="sm:flex gap-3 hidden">
+        <ThemeToggle />
+        {navIcons.map((v, i) => {
+          return (
+            <div key={i}>
+              {v.icon ? (
+                <>
+                  <div key={i}>
+                    <NavIconButton
+                      icon={<v.icon />}
+                      onClick={() => console.log(v.id)}
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div key={i}>
+                    <HeaderAvatar
+                      name="Noor Ul Ain"
+                      role="Admin"
+                      src="https://loremflickr.com/200/200?random=1"
+                      alt="Profile"
+                    />
+                  </div>
+                </>
+              )}
             </div>
+          );
+        })}
+      </div>
 
-        </>
-    );
-}
+      <div className="sm:hidden flex gap-2">
+        <ThemeToggle />
+        <HeaderMenu onClick={() => console.log("Menu")} />
+      </div>
+
+      {drawerOpen && (
+        <DashboardDrawer
+          open={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+        />
+      )}
+    </div>
+  );
+};
+
+export default DashboardHeader;

@@ -3,7 +3,7 @@
 import { HiMenu } from 'react-icons/hi';
 
 interface IHamburgerButtonProps {
-    onClick: () => void;
+    onClick: (value?: any) => void;
 }
 
 const HamburgerButton: React.FC<IHamburgerButtonProps> = ({ onClick }) => {
@@ -11,7 +11,7 @@ const HamburgerButton: React.FC<IHamburgerButtonProps> = ({ onClick }) => {
         <div
             className={`hover:bg-[var(--hover-icon-color)] rounded-full flex justify-center items-center`} >
             <button
-                onClick={onClick}
+                onClick={(e: any) => onClick(e)}
                 aria-label="Open Menu"
                 className={`border-none bg-transparent cursor-pointer rounded-full flex justify-center items-center`}
             >

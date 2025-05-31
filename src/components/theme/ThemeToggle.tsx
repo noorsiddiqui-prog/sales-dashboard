@@ -22,7 +22,7 @@ export default function ThemeToggle() {
         outline-none
         border-0
         cursor-pointer
-        bg-transparent
+        rounded-lg border-none bg-[var(--icon-bg-color)] cursor-pointer hover:bg-[var(--hover-icon-color-dark)] w-8 h-8 flex items-center justify-center
       "
     >
       <span>

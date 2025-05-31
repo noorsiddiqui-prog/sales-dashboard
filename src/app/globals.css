@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @tailwind base;
@@ -26,9 +27,13 @@
   /* Blue-500 */
   --toggle-color: #e3e1e1;
   --icon-color: #78797b;
+  --icon-bg-color: #fdfdfd;
   --hover-icon-color: #dad7d780;
+  --hover-icon-color-dark: #e7dbdb80;
   --menu-button-color: #616365;
   --beh3: #ff0469;
+  --gray-bg: #F3F3F3;
+  --light-gray-100: #b9b4b4;
 }
 
 /* Dark mode (triggered by .dark class on html) */
@@ -49,9 +54,14 @@ html.dark {
   /* Bright white for highlights */
   --toggle-color: #e2f60b;
   --icon-color: #abacb0;
+  --icon-bg-color: #82828539;
   --hover-icon-color: #82828539;
+  --hover-icon-bg-color: #82828539;
+  --hover-icon-color-dark: #9b9ba754;
   --menu-button-color: #c3c5c8;
   --beh3: #0cf01f;
+  --gray-bg: #47474a48;
+  --light-gray-100: #959595d4;
 }
 
 /* Body base styles */

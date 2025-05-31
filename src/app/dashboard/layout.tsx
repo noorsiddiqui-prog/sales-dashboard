@@ -9,8 +9,8 @@ export default function DashboardLayout(
     }) {
     return (
         <>
-            <div className="p-4"><DashboardHeader /></div>
-            {/* <div className="p-4">{children}</div> */}
+            <div className="p-4 bg-[var(--gray-bg)]"><DashboardHeader /></div>
+            <div className="p-4">{children}</div>
         </>
     );
 }
