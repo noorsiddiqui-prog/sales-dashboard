@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import { Outfit } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ["400", "500", "600", "700"],
+  variable: '--font-sans',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
