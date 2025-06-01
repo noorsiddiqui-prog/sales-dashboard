@@ -31,9 +31,10 @@
   --hover-icon-color: #dad7d780;
   --hover-icon-color-dark: #e7dbdb80;
   --menu-button-color: #616365;
-  --beh3: #ff0469;
+  --logo-color: #ff6200;
   --gray-bg: #F3F3F3;
   --light-gray-100: #b9b4b4;
+  --orange-light: #ff6200ac;
 }
 
 /* Dark mode (triggered by .dark class on html) */
@@ -52,16 +53,17 @@ html.dark {
   /* Gray-700 */
   --accent: #ffffff;
   /* Bright white for highlights */
-  --toggle-color: #e2f60b;
+  --toggle-color: #ff9d00;
   --icon-color: #abacb0;
   --icon-bg-color: #82828539;
   --hover-icon-color: #82828539;
   --hover-icon-bg-color: #82828539;
   --hover-icon-color-dark: #9b9ba754;
   --menu-button-color: #c3c5c8;
-  --beh3: #0cf01f;
+  --logo-color: #ff6200;
   --gray-bg: #47474a48;
   --light-gray-100: #959595d4;
+  --orange-light: #ff6200ac;
 }
 
 /* Body base styles */
