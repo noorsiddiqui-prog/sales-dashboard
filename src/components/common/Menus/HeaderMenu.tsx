@@ -34,13 +34,13 @@ const HeaderMenu: FC<IProps> = ({ icon, onClick }) => {
                     {v.isProfile ? (
                       <div className="px-2 hover:bg-[var(--hover-icon-color-dark)]">
                         <HeaderAvatar
-                        name="Noor Ul Ain"
-                        role="Admin"
-                        src="https://loremflickr.com/200/200?random=1"
-                        alt="Profile"
-                        width={20}
-                        height={20}
-                      />
+                          name="Noor Ul Ain"
+                          role="Admin"
+                          src="https://loremflickr.com/200/200?random=1"
+                          alt="Profile"
+                          width={20}
+                          height={20}
+                        />
                       </div>
                     ) : v.isDivider ? (
                       <HorizontalDivider />
@@ -50,7 +50,9 @@ const HeaderMenu: FC<IProps> = ({ icon, onClick }) => {
                           icon={<v.icon />}
                           onClick={() => console.log(v.id)}
                         />
-                        <p className="text-xs text-[var(--menu-button-color)]">{v.label}</p>
+                        <p className="text-xs text-[var(--menu-button-color)]">
+                          {v.label}
+                        </p>
                       </div>
                     ) : null}
                   </li>

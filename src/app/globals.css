@@ -34,9 +34,14 @@
   --logo-color: #ff6200;
   --gray-bg: #F3F3F3;
   --light-gray-100: #b9b4b4;
+  --light-gray-200: #e3dcdcd2;
+  --light-gray-300: #747171;
   --orange-light: #ff6200ac;
   --purple-light: #8a5cf68b;
+  --purple-light-100: #9e76fb8b;
   --blue-light: #7a7cf062;
+  --blue-light-dark: #6063f1a8;
+  --sky-blue-300: #7ea6fd89;
 }
 
 /* Dark mode (triggered by .dark class on html) */
@@ -65,9 +70,14 @@ html.dark {
   --logo-color: #ff6200;
   --gray-bg: #47474a48;
   --light-gray-100: #959595d4;
+  --light-gray-200: #e3dcdcd2;
+  --light-gray-300: #747171;
   --orange-light: #ff6200ac;
   --purple-light: #8a5cf68b;
-  --blue-light: ##7a7cf062;
+  --purple-light-100: #9e76fb8b;
+  --blue-light: #7a7cf062;
+  --blue-light-dark: #6063f1a8;
+  --sky-blue-300: #7ea6fd89;
 }
 
 /* Body base styles */

@@ -6,9 +6,9 @@ const Dashboard: FC<IDashboardProps> = (props) => {
     return (
         <div>
 
-            <div className="bg-white text-black dark:bg-black dark:text-white ">
+            {/* <div className="bg-white text-black dark:bg-black dark:text-white ">
                 Hello, dark mode!
-            </div>
+            </div> */}
 
         </div>
     );

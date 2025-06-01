@@ -7,7 +7,7 @@ interface IDashboardSidebarProps {}
 
 const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
   return (
-    <div className="relative min-h-screen items-start sm:w-[15%] lg:w-[18%] md:w-[25%] xs:w-[5%] sm:w-[70px] w-[50px] py-4 bg-[var(--card)] ">
+    <div className="relative min-h-screen items-start sm:w-[15%] lg:w-[15%] md:w-[25%] xs:w-[5%] sm:w-[70px] w-[50px] py-4 bg-[var(--card)] ">
       <div className="justify-center text-[var(--logo-color)] text-2xl font-bold font-sans items-center mt-2 sm:flex hidden">
         Salestics
       </div>
@@ -22,7 +22,7 @@ const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
                 </div>
               ) : (
                 <div
-                  className="md:px-2 xl:px-6 pl-2 h-18 hover:bg-[var(--hover-icon-color-dark)] flex justify-between items-center"
+                  className="md:px-2 h-18 hover:bg-[var(--hover-icon-color-dark)] flex justify-between items-center"
                   key={i}
                 >
                   <div className=" border-0 rounded-xl sm:h-14 h-8 md:w-full w-[auto] md:px-2 px-2 lg:px-4 hover:bg-[var(--logo-color)] flex items-center">
@@ -37,7 +37,7 @@ const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
                     "
                     >
                       {v.icon && (
-                        <div className="md:mr-8">
+                        <div className="md:mr-3">
                           <v.icon style={{ fontSize: "20px" }} />
                         </div>
                       )}

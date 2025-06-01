@@ -120,3 +120,34 @@ export const headerMenuItems = [
     icon: IoMdLogOut,
   },
 ];
+
+export const chartMenuItems = [
+  {
+    id: "Last Month",
+    label: "Last Month",
+  },
+  {
+    id: "Divider",
+    isDivider: true,
+  },
+  {
+    id: "Last Week",
+    label: "Last Week",
+  },
+  {
+    id: "Divider",
+    isDivider: true,
+  },
+  {
+    id: "Last Day",
+    label: "Last Day",
+  },
+  {
+    id: "Divider",
+    isDivider: true,
+  },
+  {
+    id: "Last Year",
+    label: "Last Year",
+  },
+];

@@ -5,9 +5,11 @@ import DashboardSidebar from "@/components/sidebar/DashboardSidebar";
 export default function DashboardLayout({
   children,
   statsCards,
+  statsCharts
 }: {
   children: React.ReactNode;
   statsCards?: React.ReactNode;
+  statsCharts?: React.ReactNode;
 }) {
   return (
     <>
@@ -17,9 +19,12 @@ export default function DashboardLayout({
           <div className="p-4 bg-[var(--gray-bg)]">
             <DashboardHeader />
           </div>
-          <div className="p-4">{children}</div>
+          <div className="px-4">{children}</div>
           {statsCards && (
-            <div className="p-4">{statsCards}</div>
+            <div className="px-4 py-2">{statsCards}</div>
+          )}
+          {statsCharts && (
+            <div className="px-4 py-2">{statsCharts}</div>
           )}
         </div>
       </div>
