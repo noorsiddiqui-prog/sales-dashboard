@@ -35,6 +35,8 @@
   --gray-bg: #F3F3F3;
   --light-gray-100: #b9b4b4;
   --orange-light: #ff6200ac;
+  --purple-light: #8a5cf68b;
+  --blue-light: #7a7cf062;
 }
 
 /* Dark mode (triggered by .dark class on html) */
@@ -64,6 +66,8 @@ html.dark {
   --gray-bg: #47474a48;
   --light-gray-100: #959595d4;
   --orange-light: #ff6200ac;
+  --purple-light: #8a5cf68b;
+  --blue-light: ##7a7cf062;
 }
 
 /* Body base styles */

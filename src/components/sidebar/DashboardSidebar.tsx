@@ -26,7 +26,6 @@ const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
                   key={i}
                 >
                   <div className=" border-0 rounded-xl sm:h-14 h-8 md:w-full w-[auto] md:px-2 px-2 lg:px-4 hover:bg-[var(--logo-color)] flex items-center">
-                    
                     <Link
                       href={v.href || "#"}
                       className="
@@ -38,11 +37,13 @@ const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
                     "
                     >
                       {v.icon && (
-                      <div className="md:mr-8">
-                        <v.icon style={{ fontSize: "20px" }} />
+                        <div className="md:mr-8">
+                          <v.icon style={{ fontSize: "20px" }} />
+                        </div>
+                      )}
+                      <div className="flex justify-center text-align-left md:flex hidden">
+                        {v.label}
                       </div>
-                    )}
-                      <div className="flex justify-center text-align-left md:flex hidden">{v.label}</div>
                     </Link>
                   </div>
                 </div>
@@ -51,7 +52,7 @@ const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
           );
         })}
       </div>
-      <div className="px-6 absolute bottom-10 md:flex hidden">
+      <div className="absolute bottom-10 md:flex justify-center hidden w-full ml-[-10px]">
         <HeaderAvatar
           name="Noor Ul Ain"
           role="Admin"
