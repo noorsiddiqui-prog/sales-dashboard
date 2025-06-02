@@ -22,6 +22,7 @@ const options = {
   circumference: 200, // Draw only half circle
   cutout: "80%", // Donut thickness
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       display: false,
@@ -32,7 +33,7 @@ const options = {
 
 export default function HalfDonutChart() {
   return (
-    <div className="w-[200px] h-[200px]">
+    <div className="md:w-[200px] w-full md:h-[200px] h-auto">
       <Doughnut data={data} options={options} />
     </div>
   );

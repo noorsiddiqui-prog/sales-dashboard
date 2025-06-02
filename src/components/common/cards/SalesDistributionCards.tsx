@@ -40,7 +40,7 @@ const SalesDistributionCards: FC<ISalesDistributionCardsProps> = ({
           </div>
         </div>
       </div>
-      <div className="text-[var(--foreground)] font-[500] text-xl">
+      <div className="text-[var(--foreground)] font-[500] sm:text-xl text-sm ">
         {percentage}
       </div>
     </div>

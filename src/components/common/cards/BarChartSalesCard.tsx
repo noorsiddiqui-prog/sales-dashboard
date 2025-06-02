@@ -18,13 +18,13 @@ const BarChartSalesCard: FC<IBarChartSalesCardProps> = ({
     <div>
       <p
         className="font-sans text-[var(--icon-color)] 
-      text-sm font-[500] opacity-80"
+      sm:text-sm text-xs font-[500] opacity-80"
       >
         {label}
       </p>
       <p
         className="font-sans text-[var(--foreground)] 
-      text-2xl font-[600] mt-1"
+      sm:text-2xl text-lg font-[600] mt-1"
       >
         {amount}
       </p>

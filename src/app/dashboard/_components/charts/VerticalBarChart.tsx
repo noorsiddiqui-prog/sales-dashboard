@@ -96,7 +96,7 @@ const VerticalBarChart: FC<IVerticalBarChartProps> = (props) => {
       </div>
 
       {/* Bar chart */}
-      <div className="h-[250px]">
+      <div className="h-[275px]">
         <Bar
           options={{
             ...options,

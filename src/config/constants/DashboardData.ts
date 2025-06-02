@@ -2,6 +2,11 @@ import { BiPackage } from "react-icons/bi";
 import { BsCheckSquare } from "react-icons/bs";
 import { BsTruck } from "react-icons/bs";
 import { PiInvoiceLight } from "react-icons/pi";
+import { PiDressBold } from "react-icons/pi";
+import { PiTShirtBold } from "react-icons/pi";
+import { PiWatchBold } from "react-icons/pi";
+import { TbShoe } from "react-icons/tb";
+import { IoBagOutline } from "react-icons/io5";
 
 export const statsCardsData = [
     {
@@ -91,3 +96,39 @@ export const SalesDistributionCardsData = [
         color: "#8a5cf68b"
     },
 ]
+
+export const categoryData = [
+    {
+        name: "Women's Clothing",
+        percentage: "35%",
+        icon: PiDressBold
+    },
+    {
+        name: "Men's Clothing",
+        percentage: "25%",
+        icon: PiTShirtBold
+    },
+    {
+        name: "Accessories",
+        percentage: "20%",
+        icon: PiWatchBold
+    },
+    {
+        name: "Footwear",
+        percentage: "15%",
+        icon: TbShoe
+    },
+    {
+        name: "Bags & Purses",
+        percentage: "5%",
+        icon: IoBagOutline
+    },
+]
+
+export const countryStatsData = [
+    { countryName: 'United States', countryCode: 'us', userCount: '128K', percent: 27 },
+    { countryName: 'India', countryCode: 'in', userCount: '95K', percent: 20 },
+    { countryName: 'Germany', countryCode: 'de', userCount: '73K', percent: 15 },
+    { countryName: 'United Kingdom', countryCode: 'gb', userCount: '56K', percent: 12 },
+    { countryName: 'Brazil', countryCode: 'br', userCount: '42K', percent: 8 },
+];

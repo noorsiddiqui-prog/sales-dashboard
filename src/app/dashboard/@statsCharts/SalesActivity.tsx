@@ -12,7 +12,7 @@ interface ISalesActivityProps {}
 const SalesActivity: FC<ISalesActivityProps> = (props) => {
   const handleMenuClick = () => {};
   return (
-    <div className="bg-[var(--sky-blue-300)] rounded-lg p-4">
+    <div className="bg-[var(--sky-blue-300)] rounded-lg px-4 pt-4 pb-5">
       <div className="flex justify-between items-center">
         <ChartTitle title="Sales Activity" />
         <NavIconButton
@@ -22,7 +22,7 @@ const SalesActivity: FC<ISalesActivityProps> = (props) => {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mt-2">
+      <div className="grid grid-cols-2 gap-6 mt-4">
         {activityData.map((v, index) => (
           <ActivityCard
             key={index}

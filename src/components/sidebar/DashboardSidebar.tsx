@@ -1,11 +1,16 @@
+"use client"
 import { FC } from "react";
 import HeaderAvatar from "../profile-avatar/HeaderAvatar";
 import { Navbar } from "@/config/constants/Navbar";
 import HorizontalDivider from "../common/Dividers/HorizontalDivider";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
+
 interface IDashboardSidebarProps {}
 
 const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
+  const pathname = usePathname()
+  console.log(pathname)
   return (
     <div className="relative min-h-screen items-start sm:w-[15%] lg:w-[15%] md:w-[25%] xs:w-[5%] sm:w-[70px] w-[50px] py-4 bg-[var(--card)] ">
       <div className="justify-center text-[var(--logo-color)] text-2xl font-bold font-sans items-center mt-2 sm:flex hidden">
@@ -25,7 +30,9 @@ const DashboardSidebar: FC<IDashboardSidebarProps> = (props) => {
                   className="md:px-2 h-18 hover:bg-[var(--hover-icon-color-dark)] flex justify-between items-center"
                   key={i}
                 >
-                  <div className=" border-0 rounded-xl sm:h-14 h-8 md:w-full w-[auto] md:px-2 px-2 lg:px-4 hover:bg-[var(--logo-color)] flex items-center">
+                  <div
+                    className={`border-0 rounded-xl sm:h-14 h-8 md:w-full w-[auto] md:px-2 px-2 lg:px-4 ${v.href?.includes(pathname) ? "bg-[var(--logo-color)]" : ""} hover:bg-[var(--logo-color)] flex items-center`}
+                  >
                     <Link
                       href={v.href || "#"}
                       className="

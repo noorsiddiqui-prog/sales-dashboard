@@ -11,8 +11,8 @@ const StatsTag: FC<IStatsTagProps> = ({ label, color }) => {
     <div className={
         `flex items-center gap-2 
         font-sans text-[var(--menu-button-color)] 
-        text-xs font-[500]
-        px-2 py-1
+        sm:text-xs text-[10px] font-[500]
+        sm:px-2 px-1 py-1
         rounded-lg
         ${color}
         `

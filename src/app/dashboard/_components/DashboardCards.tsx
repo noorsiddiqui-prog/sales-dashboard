@@ -22,7 +22,7 @@ const DashboardCards: FC<IDashboardCardsProps> = ({ data }) => {
   const { label, value, iconColor, change, tagColor, tagSubTitle } = data;
   const handleMenuClick = () => {};
   return (
-    <div className="bg-[var(--card)] w-full h-[130px] rounded-lg p-4 space-y-6 shadow-lg">
+    <div className="bg-[var(--card)] w-full md:h-[130px] h-[auto] rounded-lg p-4 space-y-6 shadow-lg">
       <div className="flex flex-wrap justify-between items-center">
         <div className="flex items-center gap-2">
           <div className={`${iconColor} w-7 h-7 rounded-lg flex items-center justify-center`}>

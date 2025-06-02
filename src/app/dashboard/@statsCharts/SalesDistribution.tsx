@@ -13,7 +13,7 @@ const SalesDistribution: FC<ISalesDistributionProps> = (props) => {
   const handleMenuClick = () => {};
 
   return (
-    <div className="bg-[var(--card)] rounded-lg p-4">
+    <div className="bg-[var(--card)] rounded-lg px-4 pt-4 w-full">
       <div className="flex justify-between items-center">
         <ChartTitle title="Sales Distribution" />
         <NavIconButton
@@ -23,10 +23,10 @@ const SalesDistribution: FC<ISalesDistributionProps> = (props) => {
         />
       </div>
       <div className="relative">
-        <div className="flex w-full justify-center">
+        <div className="flex w-full justify-center mt-[-10px]">
           <HalfDonutChart />
         </div>
-        <div className="absolute top-28 left-20 text-[var(--menu-button-color)] text-center">
+        <div className="absolute top-26 sm:left-20 left-[42px] text-[var(--menu-button-color)] text-center">
           <p className="text-sm font-[500] font-sans text-[var(--foreground)] opacity-50">
             Total Products Sales
           </p>
@@ -39,10 +39,10 @@ const SalesDistribution: FC<ISalesDistributionProps> = (props) => {
         </div>
       </div>
 
-      <div>
+      <div className="mt-[-10px] pb-1">
         {SalesDistributionCardsData.map((v, i) => {
           return (
-            <div key={i} className="my-4">
+            <div key={i} className="mb-4">
               <SalesDistributionCards
                 key={i}
                 label={v.label}

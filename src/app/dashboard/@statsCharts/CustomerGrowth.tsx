@@ -35,7 +35,7 @@ const CustomerGrowth: FC<ICustomerGrowthProps> = (props) => {
         </div>
       </div>
 
-      <div className="mt-3">
+      <div className="mt-6">
         <ProgressChart progress={83} />
       </div>
 
